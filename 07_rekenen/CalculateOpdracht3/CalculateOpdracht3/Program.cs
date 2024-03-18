@@ -8,7 +8,6 @@ namespace CalculateOpdracht2
         {
             Console.WriteLine("Hello, World!");
 
-
             double totaalPrijs = 759.95;// tel hier alles bij elkaar op
 
             //oof wat duur, maar we hebben een kortings bon! 20% korting
@@ -16,15 +15,19 @@ namespace CalculateOpdracht2
             //eerst even uitrekenen wat we dan eigenlijk betalen , 100% - 20%
 
             double prijsProcentBetalen = 0;// maak hier de som  100% - 20% (% mag je weglaten)
+            prijsProcentBetalen = 100 - 20;
 
             //nu de echte prijs dan moeten we eerst de prijs door 100.0 delen en dan keer prijsProcentBetalen
 
             double doorHondered = 0;//maak hier de totalPrijs GEDEELD DOOR 100.0 som
+            doorHondered = totaalPrijs / 100.0;
 
             double teBetalen = 0;//nu doorHondered KEER prijsProcentBetalen
+            teBetalen = doorHondered * prijsProcentBetalen;
 
             //er moet nu 607.96 staan
             Console.WriteLine($"te betalen {teBetalen}");
+            Console.WriteLine(prijsProcentBetalen);
         }
     }
 }
